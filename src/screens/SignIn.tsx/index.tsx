@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { VStack, Heading, Icon, useTheme } from "native-base";
 import { Envelope, Key } from "phosphor-react-native";
 
