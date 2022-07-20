@@ -1,5 +1,5 @@
 import { NativeBaseProvider, StatusBar } from "native-base";
-import { Register } from "./src/screens/Register";
+import { Routes } from "./src/routes";
 
 export default function App() {
   return (
@@ -9,8 +9,8 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {/* <SignIn /> */}
-      <Register />
+
+      <Routes />
     </NativeBaseProvider>
   );
 }
