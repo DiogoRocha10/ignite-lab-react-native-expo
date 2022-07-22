@@ -1,4 +1,4 @@
-package com.basereactnativeexpo;
+package com.diogorocha10.basereactnativeexpo;
 
 import android.os.Build;
 import android.os.Bundle;

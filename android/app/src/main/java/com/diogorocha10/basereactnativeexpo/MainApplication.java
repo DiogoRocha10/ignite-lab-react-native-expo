@@ -1,4 +1,4 @@
-package com.basereactnativeexpo;
+package com.diogorocha10.basereactnativeexpo;
 
 import android.app.Application;
 import android.content.Context;
@@ -12,7 +12,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.config.ReactFeatureFlags;
 import com.facebook.soloader.SoLoader;
-import com.basereactnativeexpo.newarchitecture.MainApplicationReactNativeHost;
+import com.diogorocha10.basereactnativeexpo.newarchitecture.MainApplicationReactNativeHost;
 
 import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
@@ -88,7 +88,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.basereactnativeexpo.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.diogorocha10.basereactnativeexpo.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

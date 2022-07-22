@@ -1,4 +1,4 @@
-package com.basereactnativeexpo.newarchitecture.modules;
+package com.diogorocha10.basereactnativeexpo.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;
