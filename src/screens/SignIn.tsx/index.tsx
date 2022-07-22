@@ -1,17 +1,29 @@
 import { useState } from "react";
 import { VStack, Heading, Icon, useTheme } from "native-base";
 import { Envelope, Key } from "phosphor-react-native";
+import auth from "@react-native-firebase/auth";
+import { Alert } from "react-native";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function SignIn() {
+  const [isLoading, setIsLoading] = useState(false);
   const { colors } = useTheme();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    console.log("submit", email, password);
+    if (!email || !password) {
+      return Alert.alert("Info", "Informe o email e a senha");
+    }
+    setIsLoading(true);
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch((error) => {
+        setIsLoading(false);
+        Alert.alert("Info", error.message);
+      });
   };
 
   return (
@@ -34,7 +46,12 @@ export function SignIn() {
         secureTextEntry
         onChangeText={setPassword}
       />
-      <Button title="Entrar" w="full" onPress={handleSubmit} />
+      <Button
+        title="Entrar"
+        w="full"
+        onPress={handleSubmit}
+        isLoading={isLoading}
+      />
     </VStack>
   );
 }
