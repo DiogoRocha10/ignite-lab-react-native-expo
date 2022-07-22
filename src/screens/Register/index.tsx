@@ -42,7 +42,7 @@ export function Register() {
 
   return (
     <VStack flex={1} p={6} bg="gray.800">
-      <Header title="Register" />
+      <Header title="Solicitação" />
       <Input
         placeholder="Número do patrimônio"
         mt={4}

@@ -100,8 +100,8 @@ export function Details() {
 
   return (
     <VStack flex={1} bg="gray.900">
-      <Box px={6} bg="gray.600">
-        <Header title="Details" />
+      <Box px={6} bg="gray.900">
+        <Header title="Detalhes" />
       </Box>
       <HStack bg="gray.900" justifyContent="center" p={4}>
         {order.status === "closed" ? (
@@ -125,12 +125,12 @@ export function Details() {
           title="Equipamento"
           description={`Patrimonio ${order.patrimony}`}
           icon={DesktopTower}
-          footer={`Criado em ${order.when}`}
         />
         <Card
           title="Descrição do problema"
           description={order.description}
           icon={Clipboard}
+          footer={`Criado em ${order.when}`}
         />
         <Card
           title="solução"
