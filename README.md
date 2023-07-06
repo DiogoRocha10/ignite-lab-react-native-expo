@@ -15,7 +15,7 @@ Ignite lab expo
 
 ## :dart: About
 
-Esse projeto foi desenvolvido para colocar em pratica as técnicas de React.
+Esse projeto foi desenvolvido para colocar em pratica as técnicas de React Native com expo.
 
 ## :rocket: Technologies
 
